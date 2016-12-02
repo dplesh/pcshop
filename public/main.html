@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="he" ng-app="dmpcApp">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/angular-1.5.9/angular.js"></script>
+    <script src="js/angular-1.5.9/angular-route.js"></script>
+
+    <script src="app.js"></script>
+
+    <script src="controllers/controllers.js"></script>
+    <script src="controllers/homeController.js"></script>
+
+    <title>דימה PC</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <span class="logo-title">דימה PC</span>
+        <span class="navbar-links">
+            <a href="./views/products.html">Products</a>
+            <a href="./views/about.html">About</a>
+            <a href="./views/contact.html">Contact Us</a>
+        </span>
+    </div>
+
+    <div class="content" ng-view></div>
+</body>
+</html>
