@@ -2,18 +2,29 @@
 
 var dmpcApp = angular.module('dmpcApp', [
     'ngRoute',
-    'dmpcControllers',
-    'dmpcServices'
+    'dmpcControllers'
 ]);
 
-dmpcApp.config('$routeProvider', function($routeProvider){
+dmpcApp.config(['$routeProvider', function($routeProvider){
     $routeProvider
-        .when("/",{
+        .when('/',{
             //TOVERIFY: Relativity of path.
-            templateUrl:'./partials/home.html',
+            templateUrl:'./views/home.html',
             controller: 'homeController'
         })
+        .when('/home',{
+            redirectTo: '/'
+        })
+        .when('/products', {
+            templateUrl:'./views/products.html'
+        })
+        .when('/about', {
+            templateUrl:'./views/about.html'
+        })
+        .when('/contact', {
+            templateUrl:'./views/contact.html'
+        })
         .otherwise({
-            templateUrl:'./partials/error.html'
+            templateUrl:'./views/error.html'
         });
-});
+}]);
