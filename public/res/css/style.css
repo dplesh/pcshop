@@ -1,13 +1,13 @@
 
-
-
 .navbar {
     position: absolute;
-    padding: 1px;
+    
     z-index: 1;
     background-color: #2aabd2;
     width: 100%;
     border-radius: 0 0 0.3em 0.3em ;
+    padding: 0;
+    margin: 0;
 }
 
 .navbar-links {
@@ -15,12 +15,14 @@
 }
 
 .navbar-static {
-    padding: 1px;
+    padding: 0;
+    margin: 0;
     z-index: 1;
     background-color: #2aabd2;
     width: 100%;
     border-radius: 0 0 0.3em 0.3em ;
 }
+
 
 
 .logo-title {
@@ -43,4 +45,59 @@
 
 .page-contact{
     background-color: #3dd8ae;
+}
+
+.page.ng-leave {
+	z-index:9999;
+    -webkit-animation:slideOutLeft 0.5 both ease-in;
+    -moz-animation:slideOutLeft 0.5 both ease-in;
+    animation:slideOutLeft 0.5 both ease-in;
+}
+
+.page.ng-enter {
+	z-index:8888;
+    -webkit-animation:slideInRight 0.5 both ease-in;
+    -moz-animation:slideInRight 0.5 both ease-in;
+    animation:slideInRight 0.5 both ease-in;
+}
+
+
+/* slide in from the right */
+@keyframes slideInRight {
+	from 	{ transform:translateX(100%); }
+	to 		{ transform: translateX(0); }
+}
+@-moz-keyframes slideInRight {
+	from 	{ -moz-transform:translateX(100%); }
+	to 		{ -moz-transform: translateX(0); }
+}
+@-webkit-keyframes slideInRight {
+	from 	{ -webkit-transform:translateX(100%); }
+	to 		{ -webkit-transform: translateX(0); }
+}
+
+/* slide in from the bottom */
+@keyframes slideInUp {
+	from 	{ transform:translateY(100%); }
+	to 		{ transform: translateY(0); }
+}
+@-moz-keyframes slideInUp {
+	from 	{ -moz-transform:translateY(100%); }
+	to 		{ -moz-transform: translateY(0); }
+}
+@-webkit-keyframes slideInUp {
+	from 	{ -webkit-transform:translateY(100%); }
+	to 		{ -webkit-transform: translateY(0); }
+}
+
+
+/* slide out to the left */
+@keyframes slideOutLeft {
+	to 		{ transform: translateX(-100%); }
+}
+@-moz-keyframes slideOutLeft {	
+	to 		{ -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes slideOutLeft {
+	to 		{ -webkit-transform: translateX(-100%); }
 }

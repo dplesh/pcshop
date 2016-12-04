@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl" ng-app="dmpcApp">
+<html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <script src="./js/angular-1.5.9/angular.js"></script>
@@ -21,12 +21,12 @@
 
     <link rel="stylesheet" href="./res/css/style.css"/>
     <link rel="stylesheet" href="./res/fonts/assistant/assistant.css"/>
-    <link rel="stylesheet" href="./res/fonts/alef/alef.css"/>
+    <link rel="stylesheet" href="./res/fonts/alef/alef.css"/>    
 
     <title>דימה PC</title>
 </head>
 
-<body>
+<body ng-app="dmpcApp">
     <div class="navbar nav">
         <span class="logo-title ">דימה PC</span>
         <span class="navbar-links ">
@@ -46,6 +46,6 @@
         </span>
     </div>
 
-    <div class="content {{pageClass}}" ng-view></div>
+    <div class="page {{pageClass}}" ng-view></div>
 </body>
 </html>
