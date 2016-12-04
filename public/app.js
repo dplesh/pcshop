@@ -2,7 +2,9 @@
 
 var dmpcApp = angular.module('dmpcApp', [
     'ngRoute',
+    'ngAnimate',
     'dmpcControllers'
+
 ]);
 
 dmpcApp.config(['$routeProvider', function($routeProvider){
