@@ -28,3 +28,19 @@
     font-weight: bold;
     font-size: 5em;
 }
+
+.page-home{
+    background-color: #3d67d8;
+}
+
+.page-products{
+    background-color: #d8ae3d;
+}
+
+.page-about{
+    background-color: #d83d67;
+}
+
+.page-contact{
+    background-color: #3dd8ae;
+}

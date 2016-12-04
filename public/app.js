@@ -18,13 +18,18 @@ dmpcApp.config(['$routeProvider', function($routeProvider){
             redirectTo: '/'
         })
         .when('/products', {
-            templateUrl:'./views/products.html'
+            templateUrl:'./views/products.html',
+            controller: 'productsController'
+
         })
         .when('/about', {
-            templateUrl:'./views/about.html'
+            templateUrl:'./views/about.html',
+            controller: 'aboutController'
         })
         .when('/contact', {
-            templateUrl:'./views/contact.html'
+            templateUrl:'./views/contact.html',
+            controller: 'contactController'
+            
         })
         .otherwise({
             templateUrl:'./views/error.html'

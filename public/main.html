@@ -11,6 +11,9 @@
 
     <script src="./controllers/controllers.js"></script>
     <script src="./controllers/homeController.js"></script>
+    <script src="./controllers/productsController.js"> </script>
+    <script src="./controllers/aboutController.js"> </script>
+    <script src="./controllers/contactController.js"> </script>
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="./res/bootstrap/js/bootstrap.js"></script>
@@ -43,6 +46,6 @@
         </span>
     </div>
 
-    <div class="content" ng-view></div>
+    <div class="content {{pageClass}}" ng-view></div>
 </body>
 </html>
