@@ -1,4 +1,6 @@
 
+
+
 .navbar {
     position: absolute;
     
@@ -32,24 +34,30 @@
 }
 
 
-
+.page {
+    font-size: 1.2em;
+}
 
 .page-home{
+    color: #40413f;
     background-color: #3d67d8;
     position: absolute;
 }
 
 .page-products{
-    background-color: #d8ae3d;
+    color: #50514f;
+    background-color: #e8be4d;
     position: absolute;
 }
 
 .page-about{
-    background-color: #d83d67;
+    color: #50514f;
+    background-color: #dc5278;
     position: absolute;
 }
 
 .page-contact{
+    color: #50514f;
     background-color: #3dd8ae;
-    position: absolute;
+    position: absolute; 
 }
