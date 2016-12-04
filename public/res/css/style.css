@@ -14,6 +14,15 @@
     text-align: left;
 }
 
+.navbar-static {
+    padding: 1px;
+    z-index: 1;
+    background-color: #2aabd2;
+    width: 100%;
+    border-radius: 0 0 0.3em 0.3em ;
+}
+
+
 .logo-title {
     font-family: 'Alef';
     font-weight: bold;
