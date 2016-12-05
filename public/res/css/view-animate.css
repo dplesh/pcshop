@@ -5,7 +5,7 @@ html         { overflow-y:hidden; }
 
 
 .page-home.ng-leave         {
-
+position: fixed;
     -webkit-animation:slideOutLeft 0.9s both ease;
 	-moz-animation:slideOutLeft 0.9s both ease;
 	animation:slideOutLeft 0.9s both ease;   
@@ -19,7 +19,7 @@ html         { overflow-y:hidden; }
 
 
 .page-products.ng-leave         {
-
+position: fixed;
     -webkit-animation:slideOutLeft 0.9s both ease;
 	-moz-animation:slideOutLeft 0.9s both ease;
 	animation:slideOutLeft 0.9s both ease;   
@@ -33,7 +33,7 @@ html         { overflow-y:hidden; }
 
 
 .page-about.ng-leave         {
-
+position: fixed;
     -webkit-animation:slideOutLeft 0.9s both ease;
 	-moz-animation:slideOutLeft 0.9s both ease;
 	animation:slideOutLeft 0.9s both ease;   
@@ -47,7 +47,7 @@ html         { overflow-y:hidden; }
 
 
 .page-contact.ng-leave         {
-
+position: fixed;
     -webkit-animation:slideOutLeft 0.9s both ease;
 	-moz-animation:slideOutLeft 0.9s both ease;
 	animation:slideOutLeft 0.9s both ease;   
