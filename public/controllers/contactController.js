@@ -1,7 +1,7 @@
 'use strict';
 
 var contactController = angular.module('dmpcControllers')
-    .controller('contactController', ['$scope', function($scope){
+    .controller('contactController', ['$scope', 'mobileDetectorService' , function($scope){
         $scope.pageClass='page-contact';
         }
     ]);

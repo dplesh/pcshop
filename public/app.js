@@ -3,7 +3,8 @@
 var dmpcApp = angular.module('dmpcApp', [
     'ngRoute',
     'ngAnimate',
-    'dmpcControllers'
+    'dmpcControllers',
+    'mobileDetectorModule'
 
 ]);
 

@@ -1,7 +1,8 @@
 'use strict';
 
 var aboutController = angular.module('dmpcControllers')
-    .controller('aboutController', ['$scope', function($scope){
-        $scope.pageClass='page-about';
+    .controller('aboutController', ['$scope', 'mobileDetectorService' ,function($scope, mobileDetectorService){
+            $scope.pageClass='page-about';
+       
         }
     ]);
