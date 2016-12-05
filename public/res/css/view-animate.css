@@ -6,57 +6,57 @@ html         { overflow-y:hidden; }
 
 .page-home.ng-leave         {
 
-    -webkit-animation:slideOutLeft 0.5s both ease-in;
-	-moz-animation:slideOutLeft 0.5s both ease-in;
-	animation:slideOutLeft 0.5s both ease-in;   
+    -webkit-animation:slideOutLeft 0.9s both ease;
+	-moz-animation:slideOutLeft 0.9s both ease;
+	animation:slideOutLeft 0.9s both ease;   
 }
 .page-home.ng-enter 		{
  
-    -webkit-animation:slideInRight 0.5s both ease-in-out;
-	-moz-animation:slideInRight 0.5s both ease-in;
-	animation:slideInRight 0.5s both ease-in;    
+    -webkit-animation:slideInTop 0.9s both ease;
+	-moz-animation:slideInTop 0.9s both ease;
+	animation:slideInTop 0.9s both ease;    
 }
 
 
 .page-products.ng-leave         {
 
-    -webkit-animation:slideOutLeft 0.5s both ease-in;
-	-moz-animation:slideOutLeft 0.5s both ease-in;
-	animation:slideOutLeft 0.5s both ease-in;   
+    -webkit-animation:slideOutLeft 0.9s both ease;
+	-moz-animation:slideOutLeft 0.9s both ease;
+	animation:slideOutLeft 0.9s both ease;   
 }
 .page-products.ng-enter 		{
   
-    -webkit-animation:slideInRight 0.5s both ease-in;
-	-moz-animation:slideInRight 0.5s both ease-in;
-	animation:slideInRight 0.5s both ease-in;    
+    -webkit-animation:slideInTop 0.9s both ease;
+	-moz-animation:slideInTop 0.9s both ease;
+	animation:slideInTop 0.9s both ease;    
 }
 
 
 .page-about.ng-leave         {
 
-    -webkit-animation:slideOutLeft 0.5s both ease-in;
-	-moz-animation:slideOutLeft 0.5s both ease-in;
-	animation:slideOutLeft 0.5s both ease-in;   
+    -webkit-animation:slideOutLeft 0.9s both ease;
+	-moz-animation:slideOutLeft 0.9s both ease;
+	animation:slideOutLeft 0.9s both ease;   
 }
 .page-about.ng-enter 		{
  
-    -webkit-animation:slideInRight 0.5s both ease-in;
-	-moz-animation:slideInRight 0.5s both ease-in;
-	animation:slideInRight 0.5s both ease-in;    
+    -webkit-animation:slideInTop 0.9s both ease;
+	-moz-animation:slideInTop 0.9s both ease;
+	animation:slideInTop 0.9s both ease;    
 }
 
 
 .page-contact.ng-leave         {
 
-    -webkit-animation:slideOutLeft 0.5s both ease-in;
-	-moz-animation:slideOutLeft 0.5s both ease-in;
-	animation:slideOutLeft 0.5s both ease-in;   
+    -webkit-animation:slideOutLeft 0.9s both ease;
+	-moz-animation:slideOutLeft 0.9s both ease;
+	animation:slideOutLeft 0.9s both ease;   
 }
 .page-contact.ng-enter 		{
 
-    -webkit-animation:slideInRight 0.5s both ease-in;
-	-moz-animation:slideInRight 0.5s both ease-in;
-	animation:slideInRight 0.5s both ease-in;    
+    -webkit-animation:slideInTop 0.9s both ease;
+	-moz-animation:slideInTop 0.9s both ease;
+	animation:slideInTop 0.9s both ease;    
 }
 
 
@@ -85,4 +85,18 @@ html         { overflow-y:hidden; }
 }
 @-webkit-keyframes slideOutLeft {
 	to 		{ -webkit-transform: translateX(-100%); }
+}
+
+
+@keyframes slideInTop {
+	from 	{ transform:translateY(-100%); }
+	to 		{ transform: translateY(0); }
+}
+@-moz-keyframes slideInTop {
+	from 	{ -moz-transform:translateY(-100%); }
+	to 		{ -moz-transform: translateY(0); }
+}
+@-webkit-keyframes slideInTop {
+	from 	{ -webkit-transform:translateY(-100%); }
+	to 		{ -webkit-transform: translateY(0); }
 }

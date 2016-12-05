@@ -4,7 +4,7 @@
 .navbar {
     position: absolute;
     
-    z-index: 1;
+    z-index: 12000;
     background-color: #2aabd2;
     width: 100%;
     border-radius: 0 0 0.3em 0.3em ;
@@ -38,26 +38,41 @@
     font-size: 1.2em;
 }
 
-.page-home{
+.section-header {
+    margin: 0;
+}
+
+.page-home .section-header{
     color: #40413f;
     background-color: #3d67d8;
-    position: absolute;
+    
 }
 
-.page-products{
+.page-products .section-header{
     color: #50514f;
     background-color: #e8be4d;
-    position: absolute;
+    
 }
 
-.page-about{
+.page-about .section-header{
     color: #50514f;
     background-color: #dc5278;
-    position: absolute;
+    
 }
 
-.page-contact{
+.page-contact .section-header{
     color: #50514f;
     background-color: #3dd8ae;
-    position: absolute; 
+    
+}
+
+
+
+.page {
+    position: absolute;
+} 
+
+
+.page .section-content {
+    background-color: white;
 }
