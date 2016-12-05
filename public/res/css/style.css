@@ -1,19 +1,30 @@
 
-
-
 .navbar {
-    position: absolute;
-    
     z-index: 12000;
     background-color: #2aabd2;
-    width: 100%;
-    border-radius: 0 0 0.3em 0.3em ;
-    padding: 0;
-    margin: 0;
+    margin-bottom: 0 !important;
 }
 
 .navbar-links {
-    text-align: left;
+    float:none;
+    display: inline-block;
+    font-size: 2em;
+    color: #5d5d5d;
+    padding-right: 0;
+}
+
+nav li a.nav-link:hover{
+    background-color: #1a9bc2;
+    color: #c0c1cf
+}
+
+nav li a.nav-link:focus{
+    background-color: #1f9fca;
+    color: #70716f
+}
+
+nav li a.nav-link{
+    color: #50514f;
 }
 
 .navbar-static {
@@ -26,53 +37,50 @@
 }
 
 
-
 .logo-title {
     font-family: 'Alef';
     font-weight: bold;
-    font-size: 5em;
+    font-size: 4em;
+    z-index: 12001;
 }
-
 
 .page {
     font-size: 1.2em;
-}
-
-.section-header {
-    margin: 0;
-}
-
-.page-home .section-header{
-    color: #40413f;
-    background-color: #3d67d8;
-    
-}
-
-.page-products .section-header{
-    color: #50514f;
-    background-color: #e8be4d;
-    
-}
-
-.page-about .section-header{
-    color: #50514f;
-    background-color: #dc5278;
-    
-}
-
-.page-contact .section-header{
-    color: #50514f;
-    background-color: #3dd8ae;
-    
-}
-
-
-
-.page {
     position: absolute;
-} 
-
+}
 
 .page .section-content {
     background-color: white;
 }
+
+.section-header {
+    margin: 0;
+    padding: 10px;
+    font-size: 2.5em;
+}
+
+.page-home .section-header{
+    background-color: #40413f;
+    color: #3d67d8;
+    
+}
+
+.page-products .section-header{
+    background-color: #50514f;
+    color: #e8be4d;
+    
+}
+
+.page-about .section-header{
+    background-color: #50514f;
+    color: #dc5278;
+    
+}
+
+.page-contact .section-header{
+    background-color: #50514f;
+    color: #3dd8ae;
+    
+}
+
+

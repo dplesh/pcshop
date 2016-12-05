@@ -2,6 +2,7 @@
 <html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="./js/angular-1.5.9/angular.js"></script>
     <script src="./js/angular-1.5.9/angular-route.js"></script>
 
@@ -29,24 +30,28 @@
 </head>
 
 <body ng-app="dmpcApp">
-    <div class="navbar nav">
-        <span class="logo-title ">דימה PC</span>
-        <span class="navbar-links ">
-            <a href="#home">ראשי</a>
-            <a href="#products">מוצרים</a>
-            <a href="#about">אודות</a>
-            <a href="#contact">צור קשר</a>
-        </span>
-    </div>
-    <div class="navbar-static">
-        <span class="logo-title ">דימה PC</span>
-        <span class="navbar-links ">
-            <a href="#home">ראשי</a>
-            <a href="#products">מוצרים</a>
-            <a href="#about">אודות</a>
-            <a href="#contact">צור קשר</a>
-        </span>
-    </div>
+    <nav class="navbar navbar-collapsed">
+        <span class="logo-title">דימה PC</span>
+        <ul class="nav navbar-nav navbar-links">
+            
+            <li class="nav-item">
+                <a class="nav-link" href="#home">ראשי</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="#products">מוצרים</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="#about">אודות</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">צור קשר</a>
+            </li>
+        </ul>
+    </nav>
+    
 
     <div class="page {{pageClass}}" ng-view></div>
 </body>
