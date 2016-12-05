@@ -3,8 +3,7 @@
 var mobileDetectorModule = angular.module('mobileDetectorModule', []);
 
 var mobileDetectorService = mobileDetectorModule 
-    .service('mobileDetectorService', function(){
-        var isMobile;  
+    .service('mobileDetectorService', function(){  
         if(    navigator.userAgent.match(/Android/i)
             || navigator.userAgent.match(/webOS/i)
             || navigator.userAgent.match(/iPhone/i)
@@ -13,10 +12,10 @@ var mobileDetectorService = mobileDetectorModule
             || navigator.userAgent.match(/BlackBerry/i)
             || navigator.userAgent.match(/Windows Phone/i)
         ){
-            isMobile = true;
+            this.isMobile = true;
         }
         else {
-            isMobile = false;
+            this.isMobile = false;
         }
-        return {isMobile: isMobile};
+        
     })

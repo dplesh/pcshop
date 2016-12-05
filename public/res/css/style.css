@@ -3,6 +3,7 @@
     z-index: 12000;
     background-color: #2aabd2;
     margin-bottom: 0 !important;
+    
 }
 
 .navbar-links {
@@ -84,3 +85,11 @@ nav li a.nav-link{
 }
 
 
+/* Fade */
+.hvr-fade {
+  
+}
+.hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
+  background-color: #1a9bc2;
+  color: #c0c1cf;
+}

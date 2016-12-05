@@ -5,13 +5,11 @@ var dmpcApp = angular.module('dmpcApp', [
     'ngAnimate',
     'dmpcControllers',
     'mobileDetectorModule'
-
 ]);
 
 dmpcApp.config(['$routeProvider', function($routeProvider){
     $routeProvider
         .when('/',{
-            //TOVERIFY: Relativity of path.
             templateUrl:'./views/home.html',
             controller: 'homeController'
         })

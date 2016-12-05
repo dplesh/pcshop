@@ -15,6 +15,7 @@
     <script src="./controllers/productsController.js"> </script>
     <script src="./controllers/aboutController.js"> </script>
     <script src="./controllers/contactController.js"> </script>
+    <script src="./controllers/navbarController.js"> </script>
 
     <script src="./services/mobileDetectorService.js"> </script>
 
@@ -34,9 +35,11 @@
 </head>
 
 <body ng-app="dmpcApp">
-    <nav class="navbar navbar-collapsed">
+    
+    <nav class="navbar" ng-controller="navbarController">
         <span class="logo-title">דימה PC</span>
-        <ul class="nav navbar-nav navbar-links">
+        
+        <ul class="nav navbar-nav navbar-links" ng-hide="isMobile == true" >
             
             <li class="nav-item">
                 <a class="nav-link" href="#home">ראשי</a>
@@ -54,7 +57,29 @@
                 <a class="nav-link" href="#contact">צור קשר</a>
             </li>
         </ul>
+
+        <ul class="nav " ng-show="isMobile == true" >
+            
+            <li class="nav-item">
+                <a class="nav-link" href="#home">ראשי</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="#products">מוצרים</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="#about">אודות</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">צור קשר</a>
+            </li>
+        </ul>
+
     </nav>
+
+
     
 
     <div class="page {{pageClass}}" ng-view></div>
