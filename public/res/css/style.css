@@ -21,7 +21,7 @@ nav li a.nav-link:hover{
 
 nav li a.nav-link:focus{
     background: #1f9fca;
-    color: #60615f
+    color: #60615f;
 }
 
 nav li a.nav-link{
@@ -63,8 +63,16 @@ nav li a.nav-link{
 
 .page {
     font-size: 1.2em;
-    position: absolute;
+    position: static;
+    padding-top: 4em;
 }
+
+@media (max-width: 979px) {
+    .page {
+        padding-top: 4.1em;
+    }
+}
+
 
 .page .section-content {
     background-color: white;
@@ -74,6 +82,11 @@ nav li a.nav-link{
     margin: 0;
     padding: 10px;
     font-size: 2.5em;
+    -webkit-box-shadow: 0px 4px 25px -2px rgba(0,0,0,0.49);
+    -moz-box-shadow: 0px 4px 25px -2px rgba(0,0,0,0.49);
+    box-shadow: 0px 4px 25px -2px rgba(0,0,0,0.49);
+    z-index: 1000;
+
 }
 
 .page-home .section-header{
