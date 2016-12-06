@@ -1,7 +1,9 @@
 'use strict';
 
 var homeController = angular.module('dmpcControllers')
-    .controller('homeController', ['$scope', function($scope){
-        $scope.reply = 2+2;
-    }
+    .controller('homeController', ['$scope', 'mobileDetectorService' , function($scope, mobileDetectorService){
+            $scope.pageClass='page-home';
+            $scope.isMobile = mobileDetectorService.isMobile;
+            
+        }
     ]);

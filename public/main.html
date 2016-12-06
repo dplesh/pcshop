@@ -1,14 +1,23 @@
 <!DOCTYPE html>
-<html lang="he" ng-app="dmpcApp">
+<html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <script src="js/angular-1.5.9/angular.js"></script>
-    <script src="js/angular-1.5.9/angular-route.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./js/angular-1.5.9/angular.js"></script>
+    <script src="./js/angular-1.5.9/angular-route.js"></script>
 
-    <script src="app.js"></script>
+    <script src="./js/angular-1.5.9/angular-animate.js"></script>
 
-    <script src="controllers/controllers.js"></script>
-    <script src="controllers/homeController.js"></script>
+    <script src="./app.js"></script>
+
+    <script src="./controllers/controllers.js"></script>
+    <script src="./controllers/homeController.js"></script>
+    <script src="./controllers/productsController.js"> </script>
+    <script src="./controllers/aboutController.js"> </script>
+    <script src="./controllers/contactController.js"> </script>
+    <script src="./controllers/navbarController.js"> </script>
+
+    <script src="./services/mobileDetectorService.js"> </script>
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="./res/bootstrap/js/bootstrap.js"></script>
@@ -18,20 +27,68 @@
     <link rel="stylesheet" href="./res/fonts/assistant/assistant.css"/>
     <link rel="stylesheet" href="./res/fonts/alef/alef.css"/>
 
+    <link rel="stylesheet" href="./res/css/view-animate.css"/>
+
+
+
     <title>דימה PC</title>
 </head>
 
-<body>
-    <div class="navbar nav">
-        <span class="logo-title">דימה PC</span>
-        <span class="navbar-links">
-            <a href="#home">Home</a>
-            <a href="#products">Products</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact Us</a>
-        </span>
-    </div>
+<body ng-app="dmpcApp">
+    
+    <nav class="navbar" ng-controller="navbarController">
+        <span class="logo-title" ng-hide="isMobile == true">דימה PC</span>
 
-    <div class="content" ng-view></div>
+        <div class="logo-title logo-title-mobile center " ng-show="isMobile == true">דימה PC</div>
+        
+        <!-- Desktop Navbar -->
+
+        <ul class="nav navbar-nav navbar-links" ng-hide="isMobile == true" >
+            
+            <li class="nav-item">
+                <a class="nav-link" href="#home">ראשי</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="#products">מוצרים</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="#about">אודות</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">צור קשר</a>
+            </li>
+        </ul>
+        
+        <!-- Mobile Navbar -->
+
+        <div class="center">
+        <ul class="nav mobile-nav" ng-show="isMobile == true" >
+            
+            <li class="mobile-item">
+                <a class="nav-link" href="#home">ראשי</a>
+            </li>
+            
+            <li class="mobile-item">
+                <a class="nav-link" href="#products">מוצרים</a>
+            </li>
+            
+            <li class="mobile-item">
+                <a class="nav-link" href="#about">אודות</a>
+            </li>
+            
+            <li class="mobile-item">
+                <a class="nav-link" href="#contact">צור קשר</a>
+            </li>
+        </ul>
+        </div>
+    </nav>
+
+
+    
+
+    <div class="page {{pageClass}}" ng-view></div>
 </body>
 </html>
