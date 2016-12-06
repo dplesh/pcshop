@@ -37,8 +37,12 @@
 <body ng-app="dmpcApp">
     
     <nav class="navbar" ng-controller="navbarController">
-        <span class="logo-title">דימה PC</span>
+        <span class="logo-title" ng-hide="isMobile == true">דימה PC</span>
+
+        <div class="logo-title logo-title-mobile center " ng-show="isMobile == true">דימה PC</div>
         
+        <!-- Desktop Navbar -->
+
         <ul class="nav navbar-nav navbar-links" ng-hide="isMobile == true" >
             
             <li class="nav-item">
@@ -57,26 +61,29 @@
                 <a class="nav-link" href="#contact">צור קשר</a>
             </li>
         </ul>
+        
+        <!-- Mobile Navbar -->
 
-        <ul class="nav " ng-show="isMobile == true" >
+        <div class="center">
+        <ul class="nav mobile-nav" ng-show="isMobile == true" >
             
-            <li class="nav-item">
+            <li class="mobile-item">
                 <a class="nav-link" href="#home">ראשי</a>
             </li>
             
-            <li class="nav-item">
+            <li class="mobile-item">
                 <a class="nav-link" href="#products">מוצרים</a>
             </li>
             
-            <li class="nav-item">
+            <li class="mobile-item">
                 <a class="nav-link" href="#about">אודות</a>
             </li>
             
-            <li class="nav-item">
+            <li class="mobile-item">
                 <a class="nav-link" href="#contact">צור קשר</a>
             </li>
         </ul>
-
+        </div>
     </nav>
 
 

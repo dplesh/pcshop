@@ -2,47 +2,60 @@
 .navbar {
     z-index: 12000;
     background-color: #2aabd2;
-    margin-bottom: 0 !important;
-    
+    margin-bottom: 0 !important;  
 }
 
 .navbar-links {
     float:none;
     display: inline-block;
-    font-size: 2em;
+    font-size: 1.5em;
     color: #5d5d5d;
     padding-right: 0;
+    margin-top: 5px;
 }
 
 nav li a.nav-link:hover{
-    background-color: #1a9bc2;
-    color: #c0c1cf
+    background: #1a9bc2;
+    color: #d0d1df
 }
 
 nav li a.nav-link:focus{
-    background-color: #1f9fca;
-    color: #70716f
+    background: #1f9fca;
+    color: #60615f
 }
 
 nav li a.nav-link{
     color: #50514f;
+    transition-property: background, color;
+    
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
 }
 
-.navbar-static {
+
+.mobile-nav{
     padding: 0;
-    margin: 0;
-    z-index: 1;
-    background-color: #2aabd2;
-    width: 100%;
-    border-radius: 0 0 0.3em 0.3em ;
+    font-size: 1.2em;
+    line-height: 1;
 }
-
 
 .logo-title {
     font-family: 'Alef';
     font-weight: bold;
     font-size: 4em;
     z-index: 12001;
+    line-height: 1.2;
+}
+
+.logo-title-mobile{
+    font-size: 2.3em;
+    padding-bottom: 0;
+    padding-top: 5px;
+    line-height: 1;
+}
+
+.center {
+    text-align: center;
 }
 
 .page {
@@ -85,6 +98,31 @@ nav li a.nav-link{
 }
 
 
+.page-home .section-content{
+    color: #40413f;
+    background-color: #3d67d8;
+    
+}
+
+.page-products .section-content{
+    color: #50514f;
+    background-color: #e8be4d;
+    
+}
+
+.page-about .section-content{
+    color: #50514f;
+    background-color: #dc5278;
+    
+}
+
+.page-contact .section-content{
+    color: #50514f;
+    background-color: #3dd8ae;
+    
+}
+
+
 /* Fade */
 .hvr-fade {
   
@@ -92,4 +130,9 @@ nav li a.nav-link{
 .hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
   background-color: #1a9bc2;
   color: #c0c1cf;
+}
+
+
+li.mobile-item { 
+    display: inline-block;
 }
