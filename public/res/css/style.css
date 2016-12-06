@@ -32,6 +32,9 @@ nav li a.nav-link{
     transition-timing-function: ease;
 }
 
+.nav-item {
+    float : right !important;
+}
 
 .mobile-nav{
     padding: 0;
