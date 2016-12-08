@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/dplesh/pcshop#readme",
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "nodemailer": "^2.7.0"
   }
 }
