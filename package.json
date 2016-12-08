@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/dplesh/pcshop/issues"
   },
-  "homepage": "https://github.com/dplesh/pcshop#readme"
+  "homepage": "https://github.com/dplesh/pcshop#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
 }
