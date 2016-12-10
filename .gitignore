@@ -1,5 +1,11 @@
 #
 #WebStorm
 #
-
 .idea
+
+#
+# NodeJS 
+#
+
+node_modules
+npm-debug*

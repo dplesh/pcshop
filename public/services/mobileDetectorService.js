@@ -17,5 +17,4 @@ var mobileDetectorService = mobileDetectorModule
         else {
             this.isMobile = false;
         }
-        
-    })
+    });
