@@ -138,18 +138,62 @@ nav li a.nav-link{
 
 .page-contact .section-content{
     color: #50514f;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
     background-color: #3dd8ae;
     
 }
 
+.contact-form input {
+    max-width: 40vw;
+    margin-bottom: 1em;
+    margin-left: 30%;
+    margin-right: 30%;
+    background: none;
+    background-color: #fafafa;
+    border: none;
+    color: #50514f;
+    border-bottom: #60615f solid 4px;
 
-
-/* Fade */
-.hvr-fade {
-  
 }
+
+.contact-form input::placeholder, .contact-form textarea::placeholder{
+    color: #3a9bc2;
+}
+
+.contact-form input::-moz-placeholder, .contact-form textarea::-moz-placeholder{
+    color: #3a9bc2;
+}
+
+.contact-form input::-webkit-input-placeholder, .contact-form textarea::-webkit-input-placeholder{
+    color: #3a9bc2;
+}
+
+.contact-form textarea{
+    max-width: 55vw;
+    max-height: 200px;
+    min-height: 30vh;
+    background-color: #fafafa;
+    margin-left: 23%;
+    margin-right: 23%;
+    border: none;
+    color: #50514f;
+    border-bottom: #60615f solid 4px;
+}
+
+.input-invalid{
+    border-color: #e44545;
+}
+
+.input-valid{
+    border-color: #34e554;
+}
+
+
+
+.contact-form button{
+    margin: 15px;
+}
+
 .hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
   background-color: #1a9bc2;
   color: #c0c1cf;

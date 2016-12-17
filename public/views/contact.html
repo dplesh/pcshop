@@ -1,13 +1,16 @@
 
     <h2 class="section-header">Contact Us</h2>
-    <div class="section-content center full-height"> 
-        
-        <input type="text" placeholder="Name" ng-model="name"/> 
-        <input type="text" placeholder="E-Mail" ng-model="email"/>
-        <input type="text" placeholder="Phone Number" ng-model="phoneNumber"/>
-        <textarea placeholder="Description" ng-model="description"></textarea>
-        <button type="submit" ng-click="submitDetails()">Submit</button>
-
+    <div class="section-content full-height"> 
+        <br/>
+        <div class="contact-form center">
+            <input class="form-control" id="name" type="text" placeholder="Name" ng-model="name"/> 
+            <input dir="ltr" class="form-control" type="text" placeholder="E-Mail" ng-model="email"/>
+            <input dir="ltr" class="form-control" type="text" placeholder="Phone Number" ng-model="phoneNumber"/>
+            <div>
+            <textarea class="form-control" placeholder="Description" ng-model="description"></textarea>
+            </div>
+            <button type="submit" ng-click="submitDetails()">Submit</button>
+        </div>
 
     </div>
 
