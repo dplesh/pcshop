@@ -4,7 +4,8 @@ var dmpcApp = angular.module('dmpcApp', [
     'ngRoute',
     'ngAnimate',
     'dmpcControllers',
-    'mobileDetectorModule'
+    'mobileDetectorModule',
+    'contactModule'
 ]);
 
 dmpcApp.config(['$routeProvider', function($routeProvider){
