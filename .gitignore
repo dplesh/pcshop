@@ -1,17 +1,16 @@
-#
-#WebStorm
-#
+# WebStorm
 .idea
 
-#
-# NodeJS 
-#
 
+# NodeJS 
 node_modules
 npm-debug*
 
 
-#
 # VS Code
-#
 .vscode
+
+
+# Local files
+
+local*
