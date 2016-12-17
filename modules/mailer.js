@@ -23,9 +23,9 @@ var outer = {
     submitContactDetails : function (name, email, phoneNumber, description){
         var deferred = q.defer();
 
-        if (typeof name == 'undefined' || 
-        typeof phoneNumber == 'undefined' ||
-        typeof description == 'undefined' ){
+        if (typeof name == 'undefined' || name == '' || 
+        typeof phoneNumber == 'undefined' || phoneNumber == '' ||
+        typeof description == 'undefined' || description == '' ){
             deferred.reject({ message: "One or more required fields were left blank."});
         }
         else{
