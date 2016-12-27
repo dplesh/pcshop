@@ -1,26 +1,68 @@
 var nodemailer = require('nodemailer');
 var q = require('q');
+var localConfig = require('../config/local.json');
+var config = require('../config/config.json');
+
+
 
 //Private functions
 var inner = {
-    
     //TEMP: Function mocks it's return values
     //TODO: Complete this function
-    sendEmail : function (name, email, phone, description){
+    sendEmail : function sendEmail(name, email, phoneNumber, description){
         var deferred = q.defer();
-        //nodemailer.sendblabla();
-        deferred.resolve({status : true});
+        var transporter = nodemailer.createTransport({
+            service: config.mailService,
+            auth: {
+                user: localConfig.auth.user,
+                pass: localConfig.auth.pass
+            }
+        });
+        var mailOptions = {
+            from: config.srcEmailAddress,
+            to: config.dstEmailAddress,
+            subject: inner.generateMailSubject({name:name}),
+            text: inner.generateMailContent({
+                name: name,
+                email: email,
+                phone: phoneNumber,
+                description: description
+            })
+        };
+
+        transporter.sendMail(mailOptions, function(err, info) {
+            if (err){
+                console.log(err);
+                deferred.resolve(err);
+            } else {
+                console.log("Message sent:\n" + JSON.stringify(info));
+                deferred.resolve({status : true});
+            }
+        });
+
         return deferred.promise;
+    },
+    
+    generateMailSubject: function generateMailSubject(options){
+        return "New detail submission: " + options.name;
+    },
+
+    generateMailContent: function generateMailContent(options){
+        var content = "Name: ${options.name}\n" +
+        "Phone Number: ${options.phoneNumber}\n" +
+        "E-Mail: ${options.email}\n" +
+        "Description: ${options.description}\n";
+        return content;
     }
+
+
 };
 
 var outer = {
     // return values:
     // on resolve- succession status
     // on reject- error message
-    // TEMP: Function mocks it's return values
-    // TODO: Complete this function
-    submitContactDetails : function (name, email, phoneNumber, description){
+    submitContactDetails : function submitContactDetails(name, email, phoneNumber, description){
         var deferred = q.defer();
 
         if (typeof name == 'undefined' || name == '' || 
@@ -32,7 +74,7 @@ var outer = {
             inner.sendEmail(name, email, phoneNumber, description)
             .then((data)=>{
                 deferred.resolve(data);
-            }, (err)=>{
+            }).catch((err)=>{
                 deferred.reject(err);
             });
         }

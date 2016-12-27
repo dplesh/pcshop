@@ -13,7 +13,7 @@ var contactService = contactModule
             };
             $http.post("/api/submit", body).then((res) => {
                 return res;    
-            }, (errRes) => {
+            }).catch((errRes) => {
                 return errRes;
             });
         };

@@ -1,0 +1,19 @@
+{
+    
+    "dev": true,
+    "ssl":{
+        "key":{
+            "dev": "./ssl/dev/private.key"
+        },
+        "crt":{
+            "dev": "./ssl/dev/public.crt"
+        }
+    },
+    "port" : {
+        "https": "4343",
+        "http": "9090"
+    },
+    "mailService": "Gmail",
+    "srcEmailAddress": "dplesh255@gmail.com",
+    "dstEmailAddress": "dplesh255@gmail.com"
+}
