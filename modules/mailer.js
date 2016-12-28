@@ -25,7 +25,7 @@ var inner = {
             text: inner.generateMailContent({
                 name: name,
                 email: email,
-                phone: phoneNumber,
+                phoneNumber: phoneNumber,
                 description: description
             })
         };
@@ -48,10 +48,10 @@ var inner = {
     },
 
     generateMailContent: function generateMailContent(options){
-        var content = "Name: ${options.name}\n" +
-        "Phone Number: ${options.phoneNumber}\n" +
-        "E-Mail: ${options.email}\n" +
-        "Description: ${options.description}\n";
+        var content = "Name: " + options.name +
+        "\nPhone Number: "+ options.phoneNumber +
+        "\nE-Mail: " + options.email +
+        "\nDescription: " + options.description;
         return content;
     }
 

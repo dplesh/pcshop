@@ -10,8 +10,8 @@ const http = require('http');
 const https = require('https');
 
 var bodyParser = require('body-parser');
-var app = express();
 
+var app = express();
 
 // TODO: Integrate a logging framework. 
 // TODO: Integrate/Implement a log service to receive logs from clients. 
@@ -72,4 +72,16 @@ app.post('/api/submit', function(req, res){
 
 var secureServer = https.createServer(httpsOptions, app);
 secureServer.listen(config.port.https);
-console.log("HTTPS Server listening on https://localhost:"+ secureServer.address().port);
+console.log("HTTPS Server listening on https://" + config.domain.name + ":"+ secureServer.address().port);
+
+
+// HTTP to HTTPS redirection
+var redirectServer = http.createServer( function(req, res) {
+    var redirectString = 'https://' + config.domain.name + ':' + secureServer.address().port;
+    res.writeHead(301,{
+        "Location": redirectString
+    });
+    res.end();
+});
+redirectServer.listen(config.port.http);
+console.log("HTTP Redirection server listening on http://" + config.domain.name + ":" + secureServer.address().port);

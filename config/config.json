@@ -14,6 +14,9 @@
         "http": "9090"
     },
     "mailService": "Gmail",
-    "srcEmailAddress": "dplesh255@gmail.com",
-    "dstEmailAddress": "dplesh255@gmail.com"
+    "srcEmailAddress": "dimapc.shop@gmail.com",
+    "dstEmailAddress": "dplesh255@gmail.com",
+    "domain":{
+        "name": "localhost"
+    }
 }
